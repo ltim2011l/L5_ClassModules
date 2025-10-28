@@ -1,6 +1,8 @@
 import Task from './Rod.js';
+
 export default class SubTask extends Task {
-  #subtext: string;
+	
+  #subtext;
 
   constructor(number, text, vipolnen, sub='') {
     super(number, text, vipolnen);
@@ -25,6 +27,6 @@ export default class SubTask extends Task {
   }
 
   static clone(instance) {
-    return new SubTask(instance.title, instance.text, instance.status, instance.subtext);
+    return new SubTask(instance.nomer, instance.text, instance.status, instance.subtext);
   }
 }

@@ -1,7 +1,7 @@
 export default class Task {
-  #nomer: number;
-  #text: string;
-  #status: boolean;
+  #nomer;
+  #text;
+  #status;
 
   constructor(nomer=1, text="", vipolnen=false) {
     this.#nomer = nomer;
@@ -19,9 +19,9 @@ export default class Task {
   set status(value) { this.#status = value; }
 
   show() {
-    console.log("${this.#nomer} 
+    console.log(`${this.#nomer} 
     ${this.#text} 
-    ${this.#status} ");
+    ${this.#status} `);
   }
 
   delete() {
@@ -34,7 +34,7 @@ export default class Task {
     return this;
   }
 
-  #Imortant() {
+  #Important() {
     this.#nomer = '*'+this.#nomer;
   }
 
